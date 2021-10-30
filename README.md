@@ -377,11 +377,11 @@ memberi autentikasi pada file ```/var/www/general.mecha.franky.c15.com```
 
 Langkah pengerjaan:
 - Node Skypie
- - edit file pada ```/etc/apache2/sites-available/general.mecha.franky.c15.com``` seperti gambar diabawah ini
- - ![image](https://user-images.githubusercontent.com/90212308/139533384-34ca6f33-bdf9-4d3e-a793-facfccfa9404.png)
+  - edit file pada ```/etc/apache2/sites-available/general.mecha.franky.c15.com``` seperti gambar diabawah ini
+  - ![image](https://user-images.githubusercontent.com/90212308/139533384-34ca6f33-bdf9-4d3e-a793-facfccfa9404.png)
 
- - Kemudian jalankan command ```htpasswd -c /etc/apache2/.htpasswd luffy``` dan isikan password ```onepiece```
- - restart apache ```service apache2 restart```
+  - Kemudian jalankan command ```htpasswd -c /etc/apache2/.htpasswd luffy``` dan isikan password ```onepiece```
+  - restart apache ```service apache2 restart```
 
 ### Hasil 
 - Testing pada Node Loguetown
@@ -398,7 +398,7 @@ Kendala yang dialami:
 
 <br>
 
-# Soal 17
+# Nomor 17
 Ketika mengakses IP Skypie maka akan dialihkan ke www.franky.c15.com
 
 Langkah pengerjaan :
