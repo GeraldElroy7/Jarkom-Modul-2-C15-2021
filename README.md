@@ -193,7 +193,7 @@ Lakukan `lynx www.super.franky.c15.com/js`, hasil output adalah :
 Luffy meminta agar ```www.general.mecha.franky.c15.com``` agar hanya dapat diakses oleh port ```15000``` dan ```15500```
 
 Langkah pengerjaan:
--Pada node Skypie
+- Pada node Skypie
   - pilih direktori ```/etc/apache2/sites-available```
   - copy file ```000-default.conf``` dan ubah nama file menjadi ```general.mecha.franky.c15.com.conf```
   - ubah port menjadi 15000 dan 15500
@@ -257,7 +257,6 @@ Langkah pengerjaan :
     - akses IP Skypie dengan command ```192.191.2.4```
     - maka akan dialihkan ke ```www.franky.c15.com```
     - ![image](https://user-images.githubusercontent.com/90212308/139533979-b4f05efc-a6dc-4c83-9efc-bba83abb800c.png)
-
 Kendala yang dialami:
  -
 
