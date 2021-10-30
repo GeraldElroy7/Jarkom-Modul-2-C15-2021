@@ -187,6 +187,80 @@ Lakukan `lynx www.super.franky.c15.com/js`, hasil output adalah :
 
 ![messageImage_1635595274159](https://user-images.githubusercontent.com/64303057/139537159-d2560e74-5965-4f64-8372-464c591ba1bd.jpeg)
 
+<br>
+
+# Nomor 14
+Luffy meminta agar ```www.general.mecha.franky.c15.com``` agar hanya dapat diakses oleh port ```15000``` dan ```15500```
+
+Langkah pengerjaan:
+-Pada node Skypie
+  - pilih direktori ```/etc/apache2/sites-available```
+  - copy file ```000-default.conf``` dan ubah nama file menjadi ```general.mecha.franky.c15.com.conf```
+  - ubah port menjadi 15000 dan 15500
+  - ![image](https://user-images.githubusercontent.com/90212308/139532434-23e92f5d-d287-45cd-8f30-6ee9f168f6a5.png)
+
+  - kemudian pada direktori ```/etc/apache/``` dan ubah pada file ```ports.conf```
+  - ![image](https://user-images.githubusercontent.com/90212308/139532566-c69dfacf-de8b-4cf7-a372-24cac803898b.png)
+  - ubah port yang di listen seperti gambar diatas
+  - kemudian aktifkan konfigurasi dengan ```a2ensite general.mecha.franky.c15.com.conf```
+  - setelah konfigurasi diaktifkan restart apache ```service apache2 restart```
+
+  - pindah direktori ke ```/var/www```
+  - download file yang telah disediakan dengan command ```wget https://github.com/FeinardSlim/Praktikum-Modul-2-Jarkom/raw/main/general.mecha.franky.zip```
+  - unzip file ```unzip general.mecha.franky.c15.com```
+  - kemudian hasil dari file zip yang telah di unzip tersebut di rename menjadi ```general.mecha.franky.c15.com``` menggunakan command ```mv general.mecha.franky general.mecha.franky.c15.com```
+
+ ### Hasil
+ - Testing pada Node Loguetown
+  - ```lynx general.mecha.c15.com:15000```
+  - ![image](https://user-images.githubusercontent.com/90212308/139533130-c6f38aba-24b5-44bf-b771-63c73e5a37aa.png)
+
+<br>
+
+# Nomor 15
+memberi autentikasi pada file ```/var/www/general.mecha.franky.c15.com```
+
+Langkah pengerjaan:
+- Node Skypie
+  - edit file pada ```/etc/apache2/sites-available/general.mecha.franky.c15.com``` seperti gambar diabawah ini
+  - ![image](https://user-images.githubusercontent.com/90212308/139533384-34ca6f33-bdf9-4d3e-a793-facfccfa9404.png)
+
+  - Kemudian jalankan command ```htpasswd -c /etc/apache2/.htpasswd luffy``` dan isikan password ```onepiece```
+  - restart apache ```service apache2 restart```
+
+### Hasil 
+- Testing pada Node Loguetown
+- jalankan command ```lynx www.general.mecha.franky.c15.com:15000```
+- ![image](https://user-images.githubusercontent.com/90212308/139533542-77aea596-d04b-432e-b444-9db479939677.png)
+- muncul interface sebagai berikut dan isikan username dengan ```luffy```
+- ![image](https://user-images.githubusercontent.com/90212308/139533651-09aaf168-08f1-4155-8cd1-5812f6572899.png)
+- dan isikan password tersebut dengan ```onepiece```
+- ![image](https://user-images.githubusercontent.com/90212308/139533686-c2d265d6-9d8c-43cb-978f-1474ed52b081.png)
+
+Kendala yang dialami:
+- Penerapan directory listing
+- pada ```htpasswd```
+
+<br>
+
+# Nomer 16
+Ketika mengakses IP Skypie maka akan dialihkan ke www.franky.c15.com
+
+Langkah pengerjaan :
+- pada node Skypie
+  - Edit file ``` nano /etc/apache2/sites-available/000-default.conf``` menjadi seperti berikut
+  - ![image](https://user-images.githubusercontent.com/90212308/139533891-7255b1ee-37b8-4f23-9411-63767d1636ab.png)
+  - service apache2 restart
+
+### Hasil 
+- Testing pada node Loguetown:
+    - akses IP Skypie dengan command ```192.191.2.4```
+    - maka akan dialihkan ke ```www.franky.c15.com```
+    - ![image](https://user-images.githubusercontent.com/90212308/139533979-b4f05efc-a6dc-4c83-9efc-bba83abb800c.png)
+
+Kendala yang dialami:
+ -
+
 
 
 
