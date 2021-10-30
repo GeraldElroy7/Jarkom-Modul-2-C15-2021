@@ -398,7 +398,7 @@ Kendala yang dialami:
 
 <br>
 
-# Nomor 17
+# Nomor 16
 Ketika mengakses IP Skypie maka akan dialihkan ke www.franky.c15.com
 
 Langkah pengerjaan :
